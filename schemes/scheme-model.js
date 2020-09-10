@@ -31,7 +31,8 @@ function findSteps(id) {
       "steps.instructions",
       "schemes.scheme_name"
     )
-    .where({"schemes.id": id});
+    .where({"schemes.id": id})
+    .orderBy("steps.step_number");
 }
 
 function add(scheme) {
